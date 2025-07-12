@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>うちの子ビン - ペットの写真でオリジナル水彩イラスト</title>
+    <meta name="description" content="ペットの写真を送るだけで、プロが水彩風イラストを作成。初回1枚無料、商用利用フリー、後払いOK。">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fef7ee',
+                            100: '#fdebd3',
+                            200: '#fad2a6',
+                            300: '#f6b16e',
+                            400: '#f18b34',
+                            500: '#ee7012',
+                            600: '#df5708',
+                            700: '#b94209',
+                            800: '#94340f',
+                            900: '#792c10',
+                        },
+                        watercolor: {
+                            blue: '#a8dadc',
+                            pink: '#f1c2c2',
+                            purple: '#d1b3e6',
+                            green: '#c1e6ba',
+                            yellow: '#ffeaa7'
+                        }
+                    },
+                    fontFamily: {
+                        japanese: ['Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+        }
+        
+        .watercolor-bg {
+            background: linear-gradient(135deg, #fef7ee 0%, #fad2a6 50%, #f6b16e 100%);
+        }
+        
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+        
+        .hero-image {
+            background: url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80') center/cover;
+            filter: sepia(20%) saturate(120%) hue-rotate(15deg);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Hero Section -->
+    <section class="watercolor-bg min-h-screen flex items-center">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- 左側：テキストコンテンツ -->
+                <div class="flex-1 text-center lg:text-left">
+                    <div class="inline-block bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary-700 mb-6">
+                        🎨 AI水彩イラスト生成サービス
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        写真を送るだけ。<br>
+                        <span class="text-primary-600">3枚生成、1枚無料。</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                        後払い・商用利用フリー・1分で申込完了
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#" 
+                           class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-200 shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2">
+                            📱 LINE友だち追加で無料体験
+                        </a>
+                        
+                        <a href="#gallery" 
+                           class="bg-white/90 hover:bg-white text-gray-800 font-semibold py-4 px-8 rounded-full text-lg transition-all duration-200 shadow-lg hover:shadow-xl">
+                            作品例を見る
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-600">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            初回1枚無料
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                            商用利用OK
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                            後払い対応
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右側：画像 -->
+                <div class="flex-1 w-full max-w-lg">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="hero-image aspect-square rounded-2xl shadow-lg"></div>
+                            <div class="hero-image aspect-[4/3] rounded-2xl shadow-lg"></div>
+                        </div>
+                        <div class="space-y-4 mt-8">
+                            <div class="hero-image aspect-[4/3] rounded-2xl shadow-lg"></div>
+                            <div class="hero-image aspect-square rounded-2xl shadow-lg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ペイン・ゲイン訴求セクション -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    こんな方におすすめ
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    愛するペットとの特別な瞬間を、もっと素敵な形で残しませんか？
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="bg-gradient-to-br from-watercolor-pink to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">📸</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        SNS映えする作品が欲しい
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        インスタグラムやTikTokに投稿できる、おしゃれで印象的なペットの作品を作りたい方
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-watercolor-blue to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">🎁</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        プレゼントを贈りたい
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        ペット好きの友人や家族に、世界に一つだけの特別なギフトを贈りたい方
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-watercolor-green to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        低コストで高品質を求める
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        プロのイラストレーターに依頼するより安く、でも高品質な作品が欲しい方
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-watercolor-yellow to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        すぐに作品が欲しい
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        手描きだと時間がかかるけど、AIなら数分で複数パターンの作品が手に入る
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-watercolor-purple to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        商用利用したい
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        ペットサロンやペットグッズの販売に使える、商用フリーの素材が欲しい方
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary-100 to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">🌟</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        思い出を特別な形で保存
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        愛するペットとの大切な瞬間を、アート作品として永遠に残したい方
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-xl font-medium text-gray-900 mb-4">
+                    一つでも当てはまる方は、ぜひお試しください！
+                </p>
+                <a href="#" 
+                   class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
+                    📱 無料で試してみる
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特長紹介セクション (Why Us) -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    うちの子ビンが選ばれる理由
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    他のサービスとは違う、4つの特長
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">🆓</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        初回1枚無料
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        お試しで1枚無料生成。気に入らなければ料金は一切かかりません。
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">💎</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        低価格 × 高品質
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        プロ品質のイラストが手描きの1/10の価格。コスパ最高です。
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">📄</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        商用利用フリー
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        生成した作品は完全商用フリー。ビジネスにもどんどん活用できます。
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">💳</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        後払い＆キャンセル無料
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        気に入った作品だけお支払い。満足いかなければキャンセルOK。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作例ギャラリーセクション -->
+    <section id="gallery" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    作品ギャラリー
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    実際にお客様からお預かりした写真を水彩イラストに変換した作例をご覧ください
+                </p>
+            </div>
+            
+            <!-- カルーセル -->
+            <div class="relative max-w-6xl mx-auto">
+                <div class="gallery-container overflow-hidden">
+                    <div class="gallery-track flex transition-transform duration-500 ease-in-out" id="galleryTrack">
+                        <!-- 作品1 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-pink to-watercolor-blue flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐕</div>
+                                        <p class="text-sm">ゴールデンレトリバー</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛犬ゴールデンレトリバー</h3>
+                                    <p class="text-sm text-gray-600">柔らかなタッチで描かれた水彩イラスト</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 作品2 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-purple to-watercolor-pink flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐱</div>
+                                        <p class="text-sm">ペルシャ猫</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛猫ペルシャ猫</h3>
+                                    <p class="text-sm text-gray-600">上品で優雅な雰囲気を表現</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 作品3 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-green to-watercolor-yellow flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐕</div>
+                                        <p class="text-sm">柴犬</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛犬柴犬</h3>
+                                    <p class="text-sm text-gray-600">日本らしい温かみのある表現</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 作品4 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-blue to-watercolor-green flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐱</div>
+                                        <p class="text-sm">アメリカンショートヘア</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛猫アメリカンショートヘア</h3>
+                                    <p class="text-sm text-gray-600">活発で愛らしい表情を描写</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 作品5 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-yellow to-watercolor-pink flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐕</div>
+                                        <p class="text-sm">ビーグル</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛犬ビーグル</h3>
+                                    <p class="text-sm text-gray-600">元気いっぱいの表情を表現</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 作品6 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-purple to-watercolor-blue flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐱</div>
+                                        <p class="text-sm">ラグドール</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛猫ラグドール</h3>
+                                    <p class="text-sm text-gray-600">ふわふわの毛質感を水彩で表現</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ナビゲーションボタン -->
+                <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200">
+                    <span class="text-gray-600 text-xl">‹</span>
+                </button>
+                <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200">
+                    <span class="text-gray-600 text-xl">›</span>
+                </button>
+                
+                <!-- インジケーター -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="gallery-dot w-3 h-3 rounded-full bg-primary-500 transition-colors duration-200" data-slide="0"></button>
+                    <button class="gallery-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="1"></button>
+                    <button class="gallery-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="2"></button>
+                    <button class="gallery-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="3"></button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg font-medium text-gray-900 mb-6">
+                    あなたのペットも、こんな素敵な作品にしませんか？
+                </p>
+                <a href="#" 
+                   class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
+                    📱 今すぐ無料で試す
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ご利用の流れセクション -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    ご利用の流れ
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    たった3ステップで、あなたのペットが素敵な水彩イラストに
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                    <!-- ステップ1 -->
+                    <div class="relative text-center">
+                        <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl">
+                            1
+                        </div>
+                        <div class="absolute top-10 left-1/2 transform translate-x-8 hidden md:block">
+                            <div class="w-16 h-0.5 bg-gray-300"></div>
+                            <div class="absolute right-0 top-1/2 transform translate-y-1/2 w-2 h-2 bg-gray-300 rotate-45"></div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            LINE追加
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            公式LINEアカウントを友だち追加。たった1分で簡単登録完了！
+                        </p>
+                        <div class="text-6xl mb-4">📱</div>
+                    </div>
+                    
+                    <!-- ステップ2 -->
+                    <div class="relative text-center">
+                        <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl">
+                            2
+                        </div>
+                        <div class="absolute top-10 left-1/2 transform translate-x-8 hidden md:block">
+                            <div class="w-16 h-0.5 bg-gray-300"></div>
+                            <div class="absolute right-0 top-1/2 transform translate-y-1/2 w-2 h-2 bg-gray-300 rotate-45"></div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            AI生成 → プレビュー送付
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            ペットの写真を送信すると、AIが3パターンの水彩イラストを生成してプレビューをお送りします。
+                        </p>
+                        <div class="text-6xl mb-4">🎨</div>
+                    </div>
+                    
+                    <!-- ステップ3 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl">
+                            3
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            気に入ったら購入
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            プレビューを確認して、気に入った作品があれば購入。初回は1枚無料でダウンロードできます！
+                        </p>
+                        <div class="text-6xl mb-4">💝</div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <div class="bg-green-50 border border-green-200 rounded-2xl p-6 max-w-2xl mx-auto">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            🎉 初回限定特典
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            初めてご利用の方は、3枚生成のうち1枚を無料でダウンロードできます！<br>
+                            気に入らなければ、料金は一切かかりません。
+                        </p>
+                        <a href="#" 
+                           class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
+                            📱 無料特典を受け取る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金表セクション -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    料金表
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    シンプルで分かりやすい料金体系
+                </p>
+            </div>
+            
+            <!-- タブ切り替え -->
+            <div class="max-w-md mx-auto mb-12">
+                <div class="bg-gray-100 p-2 rounded-full">
+                    <div class="grid grid-cols-2 gap-2">
+                        <button class="price-tab active bg-white text-gray-900 font-semibold py-3 px-6 rounded-full transition-all duration-200" data-tab="normal">
+                            通常画質
+                        </button>
+                        <button class="price-tab text-gray-600 font-semibold py-3 px-6 rounded-full transition-all duration-200 hover:text-gray-900" data-tab="highres">
+                            高画質（推奨）
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 料金テーブル -->
+            <div class="max-w-4xl mx-auto">
+                <!-- 通常画質テーブル -->
+                <div id="normalPricing" class="price-content">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                        <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                            <h3 class="text-xl font-bold text-gray-900">通常画質プラン</h3>
+                            <p class="text-gray-600 text-sm">手軽に楽しめるスタンダードプラン</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div class="text-center p-4 rounded-lg bg-gray-50">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥980</div>
+                                    <div class="text-sm text-gray-600 mb-2">1匹</div>
+                                    <div class="text-xs text-gray-500">3枚生成・1枚無料</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-gray-50">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥1,680</div>
+                                    <div class="text-sm text-gray-600 mb-2">2匹</div>
+                                    <div class="text-xs text-gray-500">各3枚ずつ生成</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-gray-50">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥2,280</div>
+                                    <div class="text-sm text-gray-600 mb-2">3匹</div>
+                                    <div class="text-xs text-gray-500">各3枚ずつ生成</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-gray-50">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥2,780</div>
+                                    <div class="text-sm text-gray-600 mb-2">4匹以上</div>
+                                    <div class="text-xs text-gray-500">お得なパック価格</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 高画質テーブル -->
+                <div id="highresPricing" class="price-content hidden">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-primary-300">
+                        <div class="bg-primary-50 px-6 py-4 border-b border-primary-200">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xl font-bold text-gray-900">高画質プラン</h3>
+                                <span class="bg-primary-500 text-white text-xs px-2 py-1 rounded-full">推奨</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">印刷にも対応した高品質プラン</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div class="text-center p-4 rounded-lg bg-primary-50 border border-primary-200">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥1,980</div>
+                                    <div class="text-sm text-gray-600 mb-2">1匹</div>
+                                    <div class="text-xs text-gray-500">3枚生成・1枚無料</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-primary-50 border border-primary-200">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥3,280</div>
+                                    <div class="text-sm text-gray-600 mb-2">2匹</div>
+                                    <div class="text-xs text-gray-500">各3枚ずつ生成</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-primary-50 border border-primary-200">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥4,480</div>
+                                    <div class="text-sm text-gray-600 mb-2">3匹</div>
+                                    <div class="text-xs text-gray-500">各3枚ずつ生成</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-primary-50 border border-primary-200">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥5,480</div>
+                                    <div class="text-sm text-gray-600 mb-2">4匹以上</div>
+                                    <div class="text-xs text-gray-500">お得なパック価格</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <p class="text-sm text-gray-600 mb-4">
+                        ※ 初回は1匹プランが1枚無料。追加のイラストをご希望の場合は上記料金となります。
+                    </p>
+                    <a href="#" 
+                       class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
+                        📱 料金プランを選んで注文
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お客様の声セクション -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    お客様の声
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    実際にご利用いただいたお客様からの嬉しいお声
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        「愛犬のポチの写真が、こんなに素敵な水彩イラストになるなんて！SNSに投稿したら、たくさんの『いいね』をもらえました。プロの技術ってすごいですね。」
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                            <span class="text-primary-600 font-semibold">田</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">田中美咲さん</div>
+                            <div class="text-sm text-gray-500">ゴールデンレトリバー飼い主</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        「母の誕生日プレゼントに、愛猫ミケのイラストを注文しました。とても喜んでもらえて、リビングに飾ってくれています。値段も手頃で大満足です。」
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                            <span class="text-primary-600 font-semibold">佐</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">佐藤健太さん</div>
+                            <div class="text-sm text-gray-500">ペルシャ猫飼い主</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        「商用利用OKなので、ペットサロンの看板に使わせてもらいました。お客様からも『可愛い！』と好評で、集客効果もありました。コスパ最高です。」
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                            <span class="text-primary-600 font-semibold">山</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">山田花子さん</div>
+                            <div class="text-sm text-gray-500">ペットサロン経営者</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ セクション -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    よくある質問
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    お客様からよくいただくご質問にお答えします
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-4">
+                    <div class="faq-item bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                                Q. どのような写真を送ればいいですか？
+                            </h3>
+                            <span class="faq-icon text-gray-500 text-xl">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-8 pb-6">
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-gray-700 leading-relaxed">
+                                    A. 高解像度で、ペットがはっきりと写っている写真をお送りください。逆光や手ブレがないものが理想的です。複数枚お送りいただければ、最適なものを選択いたします。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                                Q. 完成までどのくらい時間がかかりますか？
+                            </h3>
+                            <span class="faq-icon text-gray-500 text-xl">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-8 pb-6">
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-gray-700 leading-relaxed">
+                                    A. AIによる生成は数分で完了しますが、品質チェックなどを含めて通常1-2営業日でプレビューをお送りしています。お急ぎの場合はご相談ください。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                                Q. 本当に初回は無料ですか？
+                            </h3>
+                            <span class="faq-icon text-gray-500 text-xl">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-8 pb-6">
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-gray-700 leading-relaxed">
+                                    A. はい、初回ご利用の方は1匹分の3枚生成のうち1枚を無料でダウンロードできます。気に入らなければ料金は一切かかりません。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                                Q. 商用利用は本当に自由ですか？
+                            </h3>
+                            <span class="faq-icon text-gray-500 text-xl">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-8 pb-6">
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-gray-700 leading-relaxed">
+                                    A. はい、生成された作品は完全に商用利用フリーです。ペットサロンの看板、グッズ販売、SNS投稿など、どのようにご活用いただいても構いません。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッターCTA -->
+    <section class="section-padding bg-gradient-to-br from-primary-500 to-primary-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                まずは無料で試してみませんか？
+            </h2>
+            <p class="text-lg md:text-xl text-primary-100 max-w-2xl mx-auto mb-8">
+                初回1枚無料。気に入らなければ料金は一切かかりません。<br>
+                あなたの愛するペットを、素敵な水彩イラストにしましょう！
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <a href="#" 
+                   class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-200 shadow-lg hover:shadow-xl inline-flex items-center gap-2">
+                    📱 LINE友だち追加で無料体験
+                </a>
+                
+                <div class="hidden sm:block text-primary-200">または</div>
+                
+                <div class="bg-white/10 p-4 rounded-2xl">
+                    <div class="text-sm text-primary-100 mb-2">QRコードでも追加できます</div>
+                    <div class="w-24 h-24 bg-white rounded-lg flex items-center justify-center">
+                        <div class="text-gray-600 text-xs text-center">
+                            LINE<br>QRコード<br>
+                            <small>（準備中）</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm max-w-2xl mx-auto">
+                <div class="flex items-center justify-center gap-2">
+                    <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                    初回1枚無料
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <span class="w-2 h-2 bg-blue-400 rounded-full"></span>
+                    商用利用フリー
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
+                    後払い・キャンセル無料
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">うちの子ビン</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        愛するペットの写真を、プロクオリティの水彩イラストに変換するAIサービスです。初回1枚無料、商用利用フリーでご利用いただけます。
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">サービス</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">料金プラン</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors duration-200">作品ギャラリー</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">ご利用の流れ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">よくある質問</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">SNS・お問い合わせ</h4>
+                    <div class="space-y-3">
+                        <a href="#" class="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                            <span class="text-lg">📱</span>
+                            LINE公式アカウント
+                        </a>
+                        <a href="#" class="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                            <span class="text-lg">📷</span>
+                            Instagram
+                        </a>
+                        <a href="#" class="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                            <span class="text-lg">🎵</span>
+                            TikTok
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-gray-500 text-sm">
+                        © 2024 うちの子ビン. All rights reserved.
+                    </div>
+                    <div class="flex gap-6 text-sm text-gray-400">
+                        <a href="#" class="hover:text-white transition-colors duration-200">特定商取引法</a>
+                        <a href="#" class="hover:text-white transition-colors duration-200">プライバシーポリシー</a>
+                        <a href="#" class="hover:text-white transition-colors duration-200">利用規約</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ギャラリーカルーセル機能
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const galleryTrack = document.getElementById('galleryTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.gallery-dot');
+        
+        function updateGallery() {
+            const slideWidth = window.innerWidth < 768 ? 100 : (window.innerWidth < 1024 ? 50 : 33.333);
+            galleryTrack.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('bg-primary-500', index === currentSlide);
+                dot.classList.toggle('bg-gray-300', index !== currentSlide);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateGallery();
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateGallery();
+        }
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateGallery();
+            });
+        });
+        
+        // 料金表タブ切り替え
+        const priceTabs = document.querySelectorAll('.price-tab');
+        const priceContents = document.querySelectorAll('.price-content');
+        
+        priceTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.dataset.tab;
+                
+                priceTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-white', 'text-gray-900');
+                    t.classList.add('text-gray-600');
+                });
+                
+                tab.classList.add('active', 'bg-white', 'text-gray-900');
+                tab.classList.remove('text-gray-600');
+                
+                priceContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                document.getElementById(targetTab + 'Pricing').classList.remove('hidden');
+            });
+        });
+        
+        // FAQ アコーディオン
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+            
+            question.addEventListener('click', () => {
+                const isOpen = !answer.classList.contains('hidden');
+                
+                // 全てのFAQを閉じる
+                faqItems.forEach(otherItem => {
+                    otherItem.querySelector('.faq-answer').classList.add('hidden');
+                    otherItem.querySelector('.faq-icon').textContent = '+';
+                });
+                
+                // クリックされたFAQが閉じていた場合は開く
+                if (isOpen) {
+                    answer.classList.add('hidden');
+                    icon.textContent = '+';
+                } else {
+                    answer.classList.remove('hidden');
+                    icon.textContent = '-';
+                }
+            });
+        });
+        
+        // 自動カルーセル（オプション）
+        setInterval(nextSlide, 5000);
+        
+        // レスポンシブ対応
+        window.addEventListener('resize', updateGallery);
+        updateGallery();
+    </script>
+</body>
+</html>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fef7ee',
+                            100: '#fdebd3',
+                            200: '#fad2a6',
+                            300: '#f6b16e',
+                            400: '#f18b34',
+                            500: '#ee7012',
+                            600: '#df5708',
+                            700: '#b94209',
+                            800: '#94340f',
+                            900: '#792c10',
+                        },
+                        watercolor: {
+                            blue: '#a8dadc',
+                            pink: '#f1c2c2',
+                            purple: '#d1b3e6',
+                            green: '#c1e6ba',
+                            yellow: '#ffeaa7'
+                        }
+                    },
+                    fontFamily: {
+                        japanese: ['Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+        }
+        
+        .watercolor-bg {
+            background: linear-gradient(135deg, #fef7ee 0%, #fad2a6 50%, #f6b16e 100%);
+        }
+        
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+        
+        .hero-image {
+            background: url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80') center/cover;
+            filter: sepia(20%) saturate(120%) hue-rotate(15deg);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Hero Section -->
+    <section class="watercolor-bg min-h-screen flex items-center">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- 左側：テキストコンテンツ -->
+                <div class="flex-1 text-center lg:text-left">
+                    <div class="inline-block bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary-700 mb-6">
+                        🎨 AI水彩イラスト生成サービス
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        写真を送るだけ。<br>
+                        <span class="text-primary-600">3枚生成、1枚無料。</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                        後払い・商用利用フリー・1分で申込完了
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#" 
+                           class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-200 shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2">
+                            📱 LINE友だち追加で無料体験
+                        </a>
+                        
+                        <a href="#gallery" 
+                           class="bg-white/90 hover:bg-white text-gray-800 font-semibold py-4 px-8 rounded-full text-lg transition-all duration-200 shadow-lg hover:shadow-xl">
+                            作品例を見る
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-600">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            初回1枚無料
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                            商用利用OK
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                            後払い対応
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右側：画像 -->
+                <div class="flex-1 w-full max-w-lg">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="hero-image aspect-square rounded-2xl shadow-lg"></div>
+                            <div class="hero-image aspect-[4/3] rounded-2xl shadow-lg"></div>
+                        </div>
+                        <div class="space-y-4 mt-8">
+                            <div class="hero-image aspect-[4/3] rounded-2xl shadow-lg"></div>
+                            <div class="hero-image aspect-square rounded-2xl shadow-lg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ペイン・ゲイン訴求セクション -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    こんな方におすすめ
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    愛するペットとの特別な瞬間を、もっと素敵な形で残しませんか？
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="bg-gradient-to-br from-watercolor-pink to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">📸</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        SNS映えする作品が欲しい
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        インスタグラムやTikTokに投稿できる、おしゃれで印象的なペットの作品を作りたい方
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-watercolor-blue to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">🎁</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        プレゼントを贈りたい
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        ペット好きの友人や家族に、世界に一つだけの特別なギフトを贈りたい方
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-watercolor-green to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        低コストで高品質を求める
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        プロのイラストレーターに依頼するより安く、でも高品質な作品が欲しい方
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-watercolor-yellow to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        すぐに作品が欲しい
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        手描きだと時間がかかるけど、AIなら数分で複数パターンの作品が手に入る
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-watercolor-purple to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        商用利用したい
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        ペットサロンやペットグッズの販売に使える、商用フリーの素材が欲しい方
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary-100 to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl mb-4">🌟</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        思い出を特別な形で保存
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        愛するペットとの大切な瞬間を、アート作品として永遠に残したい方
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-xl font-medium text-gray-900 mb-4">
+                    一つでも当てはまる方は、ぜひお試しください！
+                </p>
+                <a href="#" 
+                   class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
+                    📱 無料で試してみる
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特長紹介セクション (Why Us) -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    うちの子ビンが選ばれる理由
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    他のサービスとは違う、4つの特長
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">🆓</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        初回1枚無料
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        お試しで1枚無料生成。気に入らなければ料金は一切かかりません。
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">💎</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        低価格 × 高品質
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        プロ品質のイラストが手描きの1/10の価格。コスパ最高です。
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">📄</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        商用利用フリー
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        生成した作品は完全商用フリー。ビジネスにもどんどん活用できます。
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">💳</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        後払い＆キャンセル無料
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        気に入った作品だけお支払い。満足いかなければキャンセルOK。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作例ギャラリーセクション -->
+    <section id="gallery" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    作品ギャラリー
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    実際にお客様からお預かりした写真を水彩イラストに変換した作例をご覧ください
+                </p>
+            </div>
+            
+            <!-- カルーセル -->
+            <div class="relative max-w-6xl mx-auto">
+                <div class="gallery-container overflow-hidden">
+                    <div class="gallery-track flex transition-transform duration-500 ease-in-out" id="galleryTrack">
+                        <!-- 作品1 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-pink to-watercolor-blue flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐕</div>
+                                        <p class="text-sm">ゴールデンレトリバー</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛犬ゴールデンレトリバー</h3>
+                                    <p class="text-sm text-gray-600">柔らかなタッチで描かれた水彩イラスト</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 作品2 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-purple to-watercolor-pink flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐱</div>
+                                        <p class="text-sm">ペルシャ猫</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛猫ペルシャ猫</h3>
+                                    <p class="text-sm text-gray-600">上品で優雅な雰囲気を表現</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 作品3 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-green to-watercolor-yellow flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐕</div>
+                                        <p class="text-sm">柴犬</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛犬柴犬</h3>
+                                    <p class="text-sm text-gray-600">日本らしい温かみのある表現</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 作品4 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-blue to-watercolor-green flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐱</div>
+                                        <p class="text-sm">アメリカンショートヘア</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛猫アメリカンショートヘア</h3>
+                                    <p class="text-sm text-gray-600">活発で愛らしい表情を描写</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 作品5 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-yellow to-watercolor-pink flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐕</div>
+                                        <p class="text-sm">ビーグル</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛犬ビーグル</h3>
+                                    <p class="text-sm text-gray-600">元気いっぱいの表情を表現</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 作品6 -->
+                        <div class="gallery-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                            <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="aspect-square bg-gradient-to-br from-watercolor-purple to-watercolor-blue flex items-center justify-center">
+                                    <div class="text-center text-gray-600">
+                                        <div class="text-4xl mb-2">🐱</div>
+                                        <p class="text-sm">ラグドール</p>
+                                        <p class="text-xs">水彩風イラスト</p>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-semibold text-gray-900 mb-2">愛猫ラグドール</h3>
+                                    <p class="text-sm text-gray-600">ふわふわの毛質感を水彩で表現</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ナビゲーションボタン -->
+                <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200">
+                    <span class="text-gray-600 text-xl">‹</span>
+                </button>
+                <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200">
+                    <span class="text-gray-600 text-xl">›</span>
+                </button>
+                
+                <!-- インジケーター -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="gallery-dot w-3 h-3 rounded-full bg-primary-500 transition-colors duration-200" data-slide="0"></button>
+                    <button class="gallery-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="1"></button>
+                    <button class="gallery-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="2"></button>
+                    <button class="gallery-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200" data-slide="3"></button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg font-medium text-gray-900 mb-6">
+                    あなたのペットも、こんな素敵な作品にしませんか？
+                </p>
+                <a href="#" 
+                   class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
+                    📱 今すぐ無料で試す
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ご利用の流れセクション -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    ご利用の流れ
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    たった3ステップで、あなたのペットが素敵な水彩イラストに
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                    <!-- ステップ1 -->
+                    <div class="relative text-center">
+                        <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl">
+                            1
+                        </div>
+                        <div class="absolute top-10 left-1/2 transform translate-x-8 hidden md:block">
+                            <div class="w-16 h-0.5 bg-gray-300"></div>
+                            <div class="absolute right-0 top-1/2 transform translate-y-1/2 w-2 h-2 bg-gray-300 rotate-45"></div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            LINE追加
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            公式LINEアカウントを友だち追加。たった1分で簡単登録完了！
+                        </p>
+                        <div class="text-6xl mb-4">📱</div>
+                    </div>
+                    
+                    <!-- ステップ2 -->
+                    <div class="relative text-center">
+                        <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl">
+                            2
+                        </div>
+                        <div class="absolute top-10 left-1/2 transform translate-x-8 hidden md:block">
+                            <div class="w-16 h-0.5 bg-gray-300"></div>
+                            <div class="absolute right-0 top-1/2 transform translate-y-1/2 w-2 h-2 bg-gray-300 rotate-45"></div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            AI生成 → プレビュー送付
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            ペットの写真を送信すると、AIが3パターンの水彩イラストを生成してプレビューをお送りします。
+                        </p>
+                        <div class="text-6xl mb-4">🎨</div>
+                    </div>
+                    
+                    <!-- ステップ3 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl">
+                            3
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            気に入ったら購入
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            プレビューを確認して、気に入った作品があれば購入。初回は1枚無料でダウンロードできます！
+                        </p>
+                        <div class="text-6xl mb-4">💝</div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <div class="bg-green-50 border border-green-200 rounded-2xl p-6 max-w-2xl mx-auto">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            🎉 初回限定特典
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            初めてご利用の方は、3枚生成のうち1枚を無料でダウンロードできます！<br>
+                            気に入らなければ、料金は一切かかりません。
+                        </p>
+                        <a href="#" 
+                           class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
+                            📱 無料特典を受け取る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金表セクション -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    料金表
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    シンプルで分かりやすい料金体系
+                </p>
+            </div>
+            
+            <!-- タブ切り替え -->
+            <div class="max-w-md mx-auto mb-12">
+                <div class="bg-gray-100 p-2 rounded-full">
+                    <div class="grid grid-cols-2 gap-2">
+                        <button class="price-tab active bg-white text-gray-900 font-semibold py-3 px-6 rounded-full transition-all duration-200" data-tab="normal">
+                            通常画質
+                        </button>
+                        <button class="price-tab text-gray-600 font-semibold py-3 px-6 rounded-full transition-all duration-200 hover:text-gray-900" data-tab="highres">
+                            高画質（推奨）
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 料金テーブル -->
+            <div class="max-w-4xl mx-auto">
+                <!-- 通常画質テーブル -->
+                <div id="normalPricing" class="price-content">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                        <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                            <h3 class="text-xl font-bold text-gray-900">通常画質プラン</h3>
+                            <p class="text-gray-600 text-sm">手軽に楽しめるスタンダードプラン</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div class="text-center p-4 rounded-lg bg-gray-50">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥980</div>
+                                    <div class="text-sm text-gray-600 mb-2">1匹</div>
+                                    <div class="text-xs text-gray-500">3枚生成・1枚無料</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-gray-50">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥1,680</div>
+                                    <div class="text-sm text-gray-600 mb-2">2匹</div>
+                                    <div class="text-xs text-gray-500">各3枚ずつ生成</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-gray-50">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥2,280</div>
+                                    <div class="text-sm text-gray-600 mb-2">3匹</div>
+                                    <div class="text-xs text-gray-500">各3枚ずつ生成</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-gray-50">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥2,780</div>
+                                    <div class="text-sm text-gray-600 mb-2">4匹以上</div>
+                                    <div class="text-xs text-gray-500">お得なパック価格</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 高画質テーブル -->
+                <div id="highresPricing" class="price-content hidden">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-primary-300">
+                        <div class="bg-primary-50 px-6 py-4 border-b border-primary-200">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-xl font-bold text-gray-900">高画質プラン</h3>
+                                <span class="bg-primary-500 text-white text-xs px-2 py-1 rounded-full">推奨</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">印刷にも対応した高品質プラン</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div class="text-center p-4 rounded-lg bg-primary-50 border border-primary-200">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥1,980</div>
+                                    <div class="text-sm text-gray-600 mb-2">1匹</div>
+                                    <div class="text-xs text-gray-500">3枚生成・1枚無料</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-primary-50 border border-primary-200">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥3,280</div>
+                                    <div class="text-sm text-gray-600 mb-2">2匹</div>
+                                    <div class="text-xs text-gray-500">各3枚ずつ生成</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-primary-50 border border-primary-200">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥4,480</div>
+                                    <div class="text-sm text-gray-600 mb-2">3匹</div>
+                                    <div class="text-xs text-gray-500">各3枚ずつ生成</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-primary-50 border border-primary-200">
+                                    <div class="text-2xl font-bold text-primary-600 mb-2">¥5,480</div>
+                                    <div class="text-sm text-gray-600 mb-2">4匹以上</div>
+                                    <div class="text-xs text-gray-500">お得なパック価格</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <p class="text-sm text-gray-600 mb-4">
+                        ※ 初回は1匹プランが1枚無料。追加のイラストをご希望の場合は上記料金となります。
+                    </p>
+                    <a href="#" 
+                       class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
+                        📱 料金プランを選んで注文
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お客様の声セクション -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    お客様の声
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    実際にご利用いただいたお客様からの嬉しいお声
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        「愛犬のポチの写真が、こんなに素敵な水彩イラストになるなんて！SNSに投稿したら、たくさんの『いいね』をもらえました。プロの技術ってすごいですね。」
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                            <span class="text-primary-600 font-semibold">田</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">田中美咲さん</div>
+                            <div class="text-sm text-gray-500">ゴールデンレトリバー飼い主</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        「母の誕生日プレゼントに、愛猫ミケのイラストを注文しました。とても喜んでもらえて、リビングに飾ってくれています。値段も手頃で大満足です。」
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                            <span class="text-primary-600 font-semibold">佐</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">佐藤健太さん</div>
+                            <div class="text-sm text-gray-500">ペルシャ猫飼い主</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        「商用利用OKなので、ペットサロンの看板に使わせてもらいました。お客様からも『可愛い！』と好評で、集客効果もありました。コスパ最高です。」
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                            <span class="text-primary-600 font-semibold">山</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">山田花子さん</div>
+                            <div class="text-sm text-gray-500">ペットサロン経営者</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ セクション -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    よくある質問
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    お客様からよくいただくご質問にお答えします
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-4">
+                    <div class="faq-item bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                                Q. どのような写真を送ればいいですか？
+                            </h3>
+                            <span class="faq-icon text-gray-500 text-xl">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-8 pb-6">
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-gray-700 leading-relaxed">
+                                    A. 高解像度で、ペットがはっきりと写っている写真をお送りください。逆光や手ブレがないものが理想的です。複数枚お送りいただければ、最適なものを選択いたします。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                                Q. 完成までどのくらい時間がかかりますか？
+                            </h3>
+                            <span class="faq-icon text-gray-500 text-xl">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-8 pb-6">
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-gray-700 leading-relaxed">
+                                    A. AIによる生成は数分で完了しますが、品質チェックなどを含めて通常1-2営業日でプレビューをお送りしています。お急ぎの場合はご相談ください。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                                Q. 本当に初回は無料ですか？
+                            </h3>
+                            <span class="faq-icon text-gray-500 text-xl">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-8 pb-6">
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-gray-700 leading-relaxed">
+                                    A. はい、初回ご利用の方は1匹分の3枚生成のうち1枚を無料でダウンロードできます。気に入らなければ料金は一切かかりません。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                                Q. 商用利用は本当に自由ですか？
+                            </h3>
+                            <span class="faq-icon text-gray-500 text-xl">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-8 pb-6">
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="text-gray-700 leading-relaxed">
+                                    A. はい、生成された作品は完全に商用利用フリーです。ペットサロンの看板、グッズ販売、SNS投稿など、どのようにご活用いただいても構いません。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッターCTA -->
+    <section class="section-padding bg-gradient-to-br from-primary-500 to-primary-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                まずは無料で試してみませんか？
+            </h2>
+            <p class="text-lg md:text-xl text-primary-100 max-w-2xl mx-auto mb-8">
+                初回1枚無料。気に入らなければ料金は一切かかりません。<br>
+                あなたの愛するペットを、素敵な水彩イラストにしましょう！
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <a href="#" 
+                   class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-200 shadow-lg hover:shadow-xl inline-flex items-center gap-2">
+                    📱 LINE友だち追加で無料体験
+                </a>
+                
+                <div class="hidden sm:block text-primary-200">または</div>
+                
+                <div class="bg-white/10 p-4 rounded-2xl">
+                    <div class="text-sm text-primary-100 mb-2">QRコードでも追加できます</div>
+                    <div class="w-24 h-24 bg-white rounded-lg flex items-center justify-center">
+                        <div class="text-gray-600 text-xs text-center">
+                            LINE<br>QRコード<br>
+                            <small>（準備中）</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm max-w-2xl mx-auto">
+                <div class="flex items-center justify-center gap-2">
+                    <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                    初回1枚無料
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <span class="w-2 h-2 bg-blue-400 rounded-full"></span>
+                    商用利用フリー
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
+                    後払い・キャンセル無料
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">うちの子ビン</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        愛するペットの写真を、プロクオリティの水彩イラストに変換するAIサービスです。初回1枚無料、商用利用フリーでご利用いただけます。
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">サービス</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">料金プラン</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors duration-200">作品ギャラリー</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">ご利用の流れ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">よくある質問</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">SNS・お問い合わせ</h4>
+                    <div class="space-y-3">
+                        <a href="#" class="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                            <span class="text-lg">📱</span>
+                            LINE公式アカウント
+                        </a>
+                        <a href="#" class="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                            <span class="text-lg">📷</span>
+                            Instagram
+                        </a>
+                        <a href="#" class="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                            <span class="text-lg">🎵</span>
+                            TikTok
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-gray-500 text-sm">
+                        © 2024 うちの子ビン. All rights reserved.
+                    </div>
+                    <div class="flex gap-6 text-sm text-gray-400">
+                        <a href="#" class="hover:text-white transition-colors duration-200">特定商取引法</a>
+                        <a href="#" class="hover:text-white transition-colors duration-200">プライバシーポリシー</a>
+                        <a href="#" class="hover:text-white transition-colors duration-200">利用規約</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ギャラリーカルーセル機能
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const galleryTrack = document.getElementById('galleryTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.gallery-dot');
+        
+        function updateGallery() {
+            const slideWidth = window.innerWidth < 768 ? 100 : (window.innerWidth < 1024 ? 50 : 33.333);
+            galleryTrack.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('bg-primary-500', index === currentSlide);
+                dot.classList.toggle('bg-gray-300', index !== currentSlide);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateGallery();
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateGallery();
+        }
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateGallery();
+            });
+        });
+        
+        // 料金表タブ切り替え
+        const priceTabs = document.querySelectorAll('.price-tab');
+        const priceContents = document.querySelectorAll('.price-content');
+        
+        priceTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.dataset.tab;
+                
+                priceTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-white', 'text-gray-900');
+                    t.classList.add('text-gray-600');
+                });
+                
+                tab.classList.add('active', 'bg-white', 'text-gray-900');
+                tab.classList.remove('text-gray-600');
+                
+                priceContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                document.getElementById(targetTab + 'Pricing').classList.remove('hidden');
+            });
+        });
+        
+        // FAQ アコーディオン
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+            
+            question.addEventListener('click', () => {
+                const isOpen = !answer.classList.contains('hidden');
+                
+                // 全てのFAQを閉じる
+                faqItems.forEach(otherItem => {
+                    otherItem.querySelector('.faq-answer').classList.add('hidden');
+                    otherItem.querySelector('.faq-icon').textContent = '+';
+                });
+                
+                // クリックされたFAQが閉じていた場合は開く
+                if (isOpen) {
+                    answer.classList.add('hidden');
+                    icon.textContent = '+';
+                } else {
+                    answer.classList.remove('hidden');
+                    icon.textContent = '-';
+                }
+            });
+        });
+        
+        // 自動カルーセル（オプション）
+        setInterval(nextSlide, 5000);
+        
+        // レスポンシブ対応
+        window.addEventListener('resize', updateGallery);
+        updateGallery();
+    </script>
+</body>
+</html>
